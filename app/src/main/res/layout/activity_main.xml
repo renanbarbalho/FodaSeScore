@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jrdevelop.fodasescore.activities.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/lyFull"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnNewScore"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_newScore" />
+
+        <Button
+            android:id="@+id/btnRules"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_rules" />
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adBannerInicial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ad_banner_1" />
+</RelativeLayout>

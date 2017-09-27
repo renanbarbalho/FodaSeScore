@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "194326020846",
+    "firebase_url": "https://fodasescore.firebaseio.com",
+    "project_id": "fodasescore",
+    "storage_bucket": "fodasescore.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194326020846:android:7b9990659cd7db3a",
+        "android_client_info": {
+          "package_name": "com.jrdevelop.fodasescore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "194326020846-rsfm9r3a04mt9fece28obi0ncp7ljnk0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jrdevelop.fodasescore",
+            "certificate_hash": "8c31b34d5cf7248840e6061e163e28fc451d5cf9"
+          }
+        },
+        {
+          "client_id": "194326020846-lahhrmfgqojukfcnukqa2annp9r676sf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARdeIvDFV-2EYW5klaAWAqlYhIQHAhzzE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "194326020846-lahhrmfgqojukfcnukqa2annp9r676sf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
