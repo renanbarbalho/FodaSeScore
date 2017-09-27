@@ -1,14 +1,22 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'RJ System'
+            keyPassword '#Jessica02032016#'
+            storeFile file('D:/PESSOAL/PROJETOS/KeyRJSystem.jks')
+            storePassword '#Jessica02032016#'
+        }
+    }
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "com.jrdevelop.fodasescore"
         minSdkVersion 19
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        versionCode getCurrentVersionCode()
+        versionName '1.' + getCurrentVersionCode()
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -20,7 +28,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -31,6 +39,34 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
+def getCurrentVersionCode() {
+    def versionPropsFile = file('version.properties')
+    def Properties versionProps = new Properties()
 
+    versionProps.load(new FileInputStream(versionPropsFile))
+
+    return versionProps['VERSION_CODE'].toInteger()
+}
+
+def setUpdatedVersionCode() {
+    def versionPropsFile = file('version.properties')
+    def Properties versionProps = new Properties()
+
+    def code = getCurrentVersionCode() + 1
+
+    versionProps['VERSION_CODE'] = code.toString()
+
+    versionProps.store(versionPropsFile.newWriter(), null)
+}
+
+task('increaseVersionCode') << {
+    setUpdatedVersionCode()
+}
+
+tasks.whenTaskAdded { task ->
+    if (task.name == 'assembleRelease') {
+        task.dependsOn 'increaseVersionCode'
+    }
+}
 
 apply plugin: 'com.google.gms.google-services'

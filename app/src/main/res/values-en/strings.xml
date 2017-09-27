@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Placar Foda-Se</string>
+    <string name="btn_newScore">New Game</string>
+    <string name="btn_rules">Rules</string>
+</resources>

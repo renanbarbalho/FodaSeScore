@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Placar - Foda-Se</string>
+    <string name="app_name">Placar Foda-Se</string>
 
     <!--elementos-->
     <string name="btn_newScore">Novo Jogo</string>
     <string name="btn_rules">Regras</string>
 
     <!--ad-senses-->
-    <string name="id_app_ad_senses">ca-app-pub-2076705468378655~5858638752</string>
-    <string name="ad_banner_1">ca-app-pub-2076705468378655/7718515338</string>
+    <string name="id_app_ad_senses" translatable="false">ca-app-pub-2076705468378655~5858638752</string>
+    <string name="ad_banner_1" translatable="false">ca-app-pub-2076705468378655/7718515338</string>
 </resources>
